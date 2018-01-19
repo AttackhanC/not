@@ -1,0 +1,36 @@
+
+<html>
+<head> 
+	<title>Sınav Ortalaması V1.0.0</title>
+	<script>
+		function hesapla() {
+
+			var exam1 = prompt("Lütfen Quiz Notunuzu Giriniz\n(20 Üzerinden)");
+			var exam2 = prompt("Lütfen Achievement Notunuzu Giriniz\n(100 Üzerinden)");
+			var oral = prompt("Lütfen Mini Oral Exam Notunuzu Giriniz\n(20 Üzerinden)");
+			var wrtng1 = prompt("Lütfen Birinci Writing Folderinizin Toplam Notunu Giriniz\n(20 Üzerinden)");
+			var wrtng2 = prompt("Lütfen ikinci Writing Folderinizin Toplam Notunu Giriniz\n(20 Üzerinden)");
+			ort = parseInt(exam1) + (parseInt(exam2)*40/100)+ parseInt(oral)+ (parseInt(wrtng1)+ parseInt(wrtng2))/2;
+			document.getElementById('para').innerHTML = "Ortalamanız:"+ort;
+		}
+	</script>
+	<style type="text/css">
+	.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+	</style>
+</head>
+<body>
+	<p style="font-size: 40px;">Lütfen Notunuzu Hesaplamak İçin Hesaplaya Basın</p>
+	<button class="button" onclick="hesapla()" style="">Hesapla</button>
+	<p id="para">
+	</p>
+</body>
+</html>
