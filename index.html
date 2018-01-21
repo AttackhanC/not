@@ -13,6 +13,7 @@
 		text-decoration: none;
 		display: inline-block;
 		font-size: 16px;
+		margin: 10px;
 	}
 	input {
 		width: 12em;
@@ -21,32 +22,34 @@
 	label {
 		margin-left: 20px;
 	}
+	.ana{
+		text-align: center;
+	}
 </style>
 </head>
 <body>
-	<form>
-	<label> 20 puan üzerinden:  </label><input type="number" name="exam1" placeholder=" Quiz Notu" ><br><hr>
+	<div class="ana">
+		<form>
+			<label> 20 puan üzerinden:  </label><input type="number" name="exam1" placeholder=" Quiz Notu" ><br><hr>
 
-	<label> 100 puan üzerinden:  </label><input type="number" name="exam2" placeholder=" Achievement Notu"  ><br><hr>
+			<label> 100 puan üzerinden:  </label><input type="number" name="exam2" placeholder=" Achievement Notu"  ><br><hr>
 
-	<label> 20 puan üzerinden:  </label><input type="number" name="oral" placeholder=" Mini Oral Exam Notu"  ><br><hr>
+			<label> 20 puan üzerinden:  </label><input type="number" name="oral" placeholder=" Mini Oral Exam Notu"  ><br><hr>
 
-	Writing Folder 1 <br><hr>
-	<label> 5 puan üzerinden:  </label><input type="number" name="wrtng1_1" placeholder=" First Draft  Notu" ><br>
-	<label> 5 puan üzerinden:  </label><input type="number" name="wrtng1_2" placeholder=" Second Draft Notu"  ><br>
-	<label> 10 puan üzerinden:  </label><input type="number" name="wrtng1_3" placeholder=" Exam Notu" ><br><hr>
+			Writing Folder 1 <br><hr>
+			<label> 5 puan üzerinden:  </label><input type="number" name="wrtng1_1" placeholder=" First Draft  Notu" ><br>
+			<label> 5 puan üzerinden:  </label><input type="number" name="wrtng1_2" placeholder=" Second Draft Notu"  ><br>
+			<label> 10 puan üzerinden:  </label><input type="number" name="wrtng1_3" placeholder=" Exam Notu" ><br><hr>
 
-	Writing Folder 2: <br> <hr>
+			Writing Folder 2: <br> <hr>
 
-	<label> 5 puan üzerinden:  </label><input type="number" name="wrtng2_1" placeholder=" First Draft  Notu" ><br>
-	<label> 5 puan üzerinden:  </label><input type="number" name="wrtng2_2" placeholder=" Second Draft Notu" ><br>
-	<label> 10 puan üzerinden:  </label><input type="number" name="wrtng2_3" placeholder=" Exam Notu" ><br><hr>
-	<button class="button" onclick="hesapla()">HESAPLA</button>
-	<input type="reset" class="button" value="TEMİZLE">
-	</form>
-
-	<p id="para">
-	</p>
+			<label> 5 puan üzerinden:  </label><input type="number" name="wrtng2_1" placeholder=" First Draft  Notu" ><br>
+			<label> 5 puan üzerinden:  </label><input type="number" name="wrtng2_2" placeholder=" Second Draft Notu" ><br>
+			<label> 10 puan üzerinden:  </label><input type="number" name="wrtng2_3" placeholder=" Exam Notu" ><br><hr>
+			<button class="button" onclick="hesapla()">HESAPLA</button>
+			<input type="reset" class="button" value="TEMİZLE">
+		</form>
+	</div>
 	<script>
 		function hesapla() {
 			var exam1 = parseInt(document.querySelectorAll('[name="exam1"]')[0].value);
