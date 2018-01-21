@@ -3,6 +3,14 @@
 <head> 
 	<title>Sınav Ortalaması V1.0.0</title>
 	<script>
+		  function counter_fn() {
+      var counter =  $('#cntr span').text();
+      var count = 0;
+      count = parseInt(counter.value);
+      count = count + 1;
+      counter.innerHTML = count;
+    }
+    window.onload = counter_fn;
 		function hesapla() {
 
 			var exam1 = prompt("Lütfen Quiz Notunuzu Giriniz\n(20 Üzerinden)");
@@ -35,15 +43,5 @@
 	<div>
     <p>Ziyaretçi Sayısı : <span id="cntr">0</span></p>
   </div>
-	 <script>
-    function counter_fn() {
-      var counter =  $('#cntr span').text();
-      var count = 0;
-      count = parseInt(counter.value);
-      count = count + 1;
-      counter.innerHTML = count;
-    }
-    window.onload = counter_fn;
-  </script>
 </body>
 </html>
