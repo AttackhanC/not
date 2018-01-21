@@ -32,5 +32,18 @@
 	<button class="button" onclick="hesapla()" style="">Hesapla</button>
 	<p id="para">
 	</p>
+	<div>
+    <p>Ziyaretçi Sayısı : <span id="cntr">0</span></p>
+  </div>
+	 <script>
+    function counter_fn() {
+      var counter =  $('#cntr span').text();
+      var count = 0;
+      count = parseInt(counter.value);
+      count = count + 1;
+      counter.innerHTML = count;
+    }
+    window.onload = counter_fn;
+  </script>
 </body>
 </html>
