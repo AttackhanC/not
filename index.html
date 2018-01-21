@@ -1,36 +1,66 @@
-
+<!DOCTYPE html>
 <html>
 <head> 
 	<title>Sınav Ortalaması V1.0.0</title>
-	<script>
-		function hesapla() {
-
-			var exam1 = prompt("Lütfen Quiz Notunuzu Giriniz\n(20 Üzerinden)");
-			var exam2 = prompt("Lütfen Achievement Notunuzu Giriniz\n(100 Üzerinden)");
-			var oral = prompt("Lütfen Mini Oral Exam Notunuzu Giriniz\n(20 Üzerinden)");
-			var wrtng1 = prompt("Lütfen Birinci Writing Folderinizin Toplam Notunu Giriniz\n(20 Üzerinden)");
-			var wrtng2 = prompt("Lütfen ikinci Writing Folderinizin Toplam Notunu Giriniz\n(20 Üzerinden)");
-			ort = parseInt(exam1) + (parseInt(exam2)*40/100)+ parseInt(oral)+ (parseInt(wrtng1)+ parseInt(wrtng2))/2;
-			document.getElementById('para').innerHTML = "Ortalamanız:"+ort;
-		}
-	</script>
+	
 	<style type="text/css">
 	.button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
-	</style>
+		background-color: #4CAF50;
+		border: none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+	}
+	input {
+		width: 12em;
+		text-align: center;
+	}
+	label {
+		margin-left: 20px;
+	}
+</style>
 </head>
 <body>
-	<p style="font-size: 40px;">Lütfen Notunuzu Hesaplamak İçin Hesaplaya Basınız</p>
-	<button class="button" onclick="hesapla()" style="">Hesapla</button>
+	<form>
+	<label> 20 puan üzerinden:  </label><input type="number" name="exam1" placeholder=" Quiz Notu" ><br><hr>
+
+	<label> 100 puan üzerinden:  </label><input type="number" name="exam2" placeholder=" Achievement Notu"  ><br><hr>
+
+	<label> 20 puan üzerinden:  </label><input type="number" name="oral" placeholder=" Mini Oral Exam Notu"  ><br><hr>
+
+	Writing Folder 1 <br><hr>
+	<label> 5 puan üzerinden:  </label><input type="number" name="wrtng1_1" placeholder=" First Draft  Notu" ><br>
+	<label> 5 puan üzerinden:  </label><input type="number" name="wrtng1_2" placeholder=" Second Draft Notu"  ><br>
+	<label> 10 puan üzerinden:  </label><input type="number" name="wrtng1_3" placeholder=" Exam Notu" ><br><hr>
+
+	Writing Folder 2: <br> <hr>
+
+	<label> 5 puan üzerinden:  </label><input type="number" name="wrtng2_1" placeholder=" First Draft  Notu" ><br>
+	<label> 5 puan üzerinden:  </label><input type="number" name="wrtng2_2" placeholder=" Second Draft Notu" ><br>
+	<label> 10 puan üzerinden:  </label><input type="number" name="wrtng2_3" placeholder=" Exam Notu" ><br><hr>
+	<button class="button" onclick="hesapla()">HESAPLA</button>
+	<input type="reset" class="button" value="TEMİZLE">
+	</form>
+
 	<p id="para">
 	</p>
+	<script>
+		function hesapla() {
+			var exam1 = parseInt(document.querySelectorAll('[name="exam1"]')[0].value);
+			var exam2 = parseInt(document.querySelectorAll('[name="exam2"]')[0].value);
+			var oral = parseInt(document.querySelectorAll('[name="oral"]')[0].value);
+			var wrtng1_1 = parseInt(document.querySelectorAll('[name="wrtng1_1"]')[0].value);
+			var wrtng1_2 = parseInt(document.querySelectorAll('[name="wrtng1_2"]')[0].value);
+			var wrtng1_3 = parseInt(document.querySelectorAll('[name="wrtng1_3"]')[0].value);
+			var wrtng2_1 = parseInt(document.querySelectorAll('[name="wrtng2_1"]')[0].value);
+			var wrtng2_2 = parseInt(document.querySelectorAll('[name="wrtng2_2"]')[0].value);
+			var wrtng2_3 = parseInt(document.querySelectorAll('[name="wrtng2_3"]')[0].value);
+			var ort =exam1+(exam2*40/100)+oral+(wrtng1_1+wrtng1_2+wrtng1_3+wrtng2_1+wrtng2_2+wrtng2_3)/2;
+			window.alert("ORTALAMANIZ:    "+ort);
+		}
+	</script>
 </body>
 </html>
