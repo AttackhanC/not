@@ -52,15 +52,15 @@
 	</div>
 	<script>
 		function hesapla() {
-			var exam1 = parseInt(document.querySelectorAll('[name="exam1"]')[0].value);
-			var exam2 = parseInt(document.querySelectorAll('[name="exam2"]')[0].value);
-			var oral = parseInt(document.querySelectorAll('[name="oral"]')[0].value);
-			var wrtng1_1 = parseInt(document.querySelectorAll('[name="wrtng1_1"]')[0].value);
-			var wrtng1_2 = parseInt(document.querySelectorAll('[name="wrtng1_2"]')[0].value);
-			var wrtng1_3 = parseInt(document.querySelectorAll('[name="wrtng1_3"]')[0].value);
-			var wrtng2_1 = parseInt(document.querySelectorAll('[name="wrtng2_1"]')[0].value);
-			var wrtng2_2 = parseInt(document.querySelectorAll('[name="wrtng2_2"]')[0].value);
-			var wrtng2_3 = parseInt(document.querySelectorAll('[name="wrtng2_3"]')[0].value);
+			var exam1 = parseFloat(document.querySelectorAll('[name="exam1"]')[0].value);
+			var exam2 = parseFloat(document.querySelectorAll('[name="exam2"]')[0].value);
+			var oral = parseFloat(document.querySelectorAll('[name="oral"]')[0].value);
+			var wrtng1_1 = parseFloat(document.querySelectorAll('[name="wrtng1_1"]')[0].value);
+			var wrtng1_2 = parseFloat(document.querySelectorAll('[name="wrtng1_2"]')[0].value);
+			var wrtng1_3 = parseFloat(document.querySelectorAll('[name="wrtng1_3"]')[0].value);
+			var wrtng2_1 = parseFloat(document.querySelectorAll('[name="wrtng2_1"]')[0].value);
+			var wrtng2_2 = parseFloat(document.querySelectorAll('[name="wrtng2_2"]')[0].value);
+			var wrtng2_3 = parseFloat(document.querySelectorAll('[name="wrtng2_3"]')[0].value);
 			var ort =exam1+(exam2*40/100)+oral+(wrtng1_1+wrtng1_2+wrtng1_3+wrtng2_1+wrtng2_2+wrtng2_3)/2;
 			window.alert("ORTALAMANIZ:    "+ort);
 		}
