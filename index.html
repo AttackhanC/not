@@ -1,55 +1,79 @@
 <!DOCTYPE html>
 <html>
-<head> 
-	<title>GateWay Giriş Ortalaması</title>
-	
+<head>
+	<title>paper</title>
+	<link rel="stylesheet" type="text/css" href="paper.min.css">
 	<style type="text/css">
-	.button {
-		background-color: #4CAF50;
-		border: none;
-		color: white;
-		padding: 15px 32px;
-		text-align: center;
-		text-decoration: none;
-		display: inline-block;
-		font-size: 16px;
-		margin: 10px;
+	.row{
+		margin: auto;
+		width: 50%;
+		padding: 10px;
 	}
-	input {
-		width: 12em;
-		text-align: center;
+	.form-group{
+		padding-right: 20px;
 	}
-	label {
-		margin-left: 20px;
-	}
-	.ana{
-		text-align: center;
-	}
+	input{
+		width: 8.75em;
+	}	
+
+	
 </style>
 </head>
 <body>
-	<div class="ana">
-		
-			<label>  Quiz Notu:  </label><input type="number" name="exam1" placeholder="20 puan üzerinden" ><br><hr>
-
-			<label> Achievement Test Notu:  </label><input type="number" name="exam2" placeholder="100 puan üzerinden"  ><br><hr>
-
-			<label> Mini Oral Exam Notu:  </label><input type="number" name="oral" placeholder="20 puan üzerinden"  ><br><hr>
-
-			Writing Folder 1 <br><hr>
-			<label>  First Draft  Notu:  </label><input type="number" name="wrtng1_1" placeholder="5 puan üzerinden" ><br>
-			<label> Second Draft Notu:  </label><input type="number" name="wrtng1_2" placeholder="5 puan üzerinden"  ><br>
-			<label> Exam Notu:  </label><input type="number" name="wrtng1_3" placeholder="10 puan üzerinden " ><br><hr>
-
-			Writing Folder 2: <br> <hr>
-
-			<label> First Draft  Notu:  </label><input type="number" name="wrtng2_1" placeholder="5 puan üzerinden" ><br>
-			<label> Second Draft Notu:  </label><input type="number" name="wrtng2_2" placeholder="5 puan üzerinden " ><br>
-			<label> Exam Notu:  </label><input type="number" name="wrtng2_3" placeholder="10 puan üzerinden" ><br><hr>
-			<button class="button" onclick="hesapla()">HESAPLA</button>
+	<div class="row">
+		<div class="col-sm-4">
 			
-		
+			<div class="form-group">
+				<p>Sınavlar:</p>
+				<div class="other">
+					<label for="exam1">  Quiz Notu:  </label>
+					<input type="number" name="exam1" placeholder="20 puan üzerinden" ><br>
+
+					<label for="exam2"> Achievement Test Notu:  </label>
+					<input type="number" name="exam2" placeholder="100 puan üzerinden"  ><br>
+
+					<label for="oral"> Mini Oral Exam Notu:  </label>
+					<input type="number" name="oral" placeholder="20 puan üzerinden"  >
+					
+				</div>
+			</div>
+			
+		</div>
+		<div class="col-sm-4">
+			
+			<div class="form-group">
+				<p>Writing Folder 1:</p>
+				<div class="wrtng">
+					<label for="wrtng1_1">  First Draft  Notu:  </label>
+					<input type="number" name="wrtng1_1" placeholder="5 puan üzerinden" ><br>
+					<label for="wrtng1_2"> Second Draft Notu:  </label>
+					<input type="number" name="wrtng1_2" placeholder="5 puan üzerinden"  ><br>
+					<label for="wrtng1_3"> Exam Notu:  </label>
+					<input type="number" name="wrtng1_3" placeholder="10 puan üzerinden " >
+				</div>
+			</div>
+			
+			
+		</div>
+		<div class="col-sm-4">
+			
+			<div class="form-group">
+				<p>Writing Folder 2:</p>
+				<div class="wrtng">
+					<label for="wrtng2_1"> First Draft  Notu:  </label>
+					<input tclass="ic" ype="number" name="wrtng2_1" placeholder="5 puan üzerinden" ><br>
+					<label for="wrtng2_2"> Second Draft Notu:  </label>
+					<input type="number" name="wrtng2_2" placeholder="5 puan üzerinden " ><br>
+					<label for="wrtng2_3"> Exam Notu:  </label>
+					<input type="number" name="wrtng2_3" placeholder="10 puan üzerinden" >
+				</div>
+			</div>
+		</div>
+		<div>
+			<button onclick="hesapla()">HESAPLA</button>
+		</div>
 	</div>
+
 	<script>
 		function hesapla() {
 			var exam1 = parseFloat(document.querySelectorAll('[name="exam1"]')[0].value);
