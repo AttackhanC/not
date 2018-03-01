@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Şanssız Konuşmacı</title>
+<style>
+p{
+ font-size:80px;
+ color:red;
+}
+</style>
+</head>
+<p id="a"></>
+
+<body>
+<script>
+
+
+arr = ["İLYAS ŞANAL","ASLI BİLGE KILINÇ","MERVENUR ÇEKİÇ","FATİH MERT","YURDANUR ÇETİN","GAYE ÇOLAK","BEYZA NUR DORUM","KÜBRA AKKUŞ","MEVLÜDİYE ARAT","EZGİ YUSRAGÜL DEMİR","BELİZ PEHLİVAN","EBUBEKİR TÜRKER","ESRA TOKOĞLULLARI","MUHAMMED AYDIN","DENİZ ÖZCAN","BEYZA AYDEMİR","ABDULRAHMAN ALBAKKAR"];
+var rndm= Math.floor((Math.random() * arr.length)); 
+document.getElementById("a").innerHTML = "CONGRATULATIONS:\n\n"+arr[rndm];
+ 
+
+</script>
+</body>
+</html>
