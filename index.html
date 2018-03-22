@@ -89,6 +89,15 @@
 			var wrtng2_1 = parseFloat(document.querySelectorAll('[name="wrtng2_1"]')[0].value);
 			var wrtng2_2 = parseFloat(document.querySelectorAll('[name="wrtng2_2"]')[0].value);
 			var wrtng2_3 = parseFloat(document.querySelectorAll('[name="wrtng2_3"]')[0].value);
+			if (isNaN(exam1)) {exam1=0;}
+			if (isNaN(exam2)) {exam2=0;}
+			if (isNaN(oral)) {oral=0;}
+			if (isNaN(wrtng1_1)) {wrtng1_1=0;}
+			if (isNaN(wrtng1_2)) {wrtng1_2=0;}
+			if (isNaN(wrtng1_3)) {wrtng1_3=0;}
+			if (isNaN(wrtng2_1)) {wrtng2_1=0;}
+			if (isNaN(wrtng2_2)) {wrtng2_2=0;}
+			if (isNaN(wrtng2_3)) {wrtng2_3=0;}
 			var ort =exam1+(exam2*40/100)+oral+(wrtng1_1+wrtng1_2+wrtng1_3+wrtng2_1+wrtng2_2+wrtng2_3)/2;
 			window.alert("ORTALAMANIZ:    "+ort);
 		}
